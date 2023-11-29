@@ -26,7 +26,7 @@ def plot_distribution(data, column):
     st.pyplot(plt)       
     
 data = load_data()
-st.title("Analisi Data Pertanian")
+st.title("Analyze of Agricultural Data")
 
 #Menu
 st.sidebar.title('Navigasi')
