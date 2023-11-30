@@ -63,27 +63,27 @@ elif page ==':bar_chart: Data Image':
 
 elif page ==':chart_with_upwards_trend: Data Visualization':
     st.header('Data Visualization')
-     columns_to_visualize = data.columns.drop('label')
-     # Pilihan kolom untuk visualisasi tanpa 'Row Labels'
-     column = st.selectbox('Pilih Kolom untuk Visualisasi', columns_to_visualize)
-     plot_distribution(data, column)
+    columns_to_visualize = data.columns.drop('label')
+    # Pilihan kolom untuk visualisasi tanpa 'Row Labels'
+    column = st.selectbox('Pilih Kolom untuk Visualisasi', columns_to_visualize)
+    plot_distribution(data, column)
     
-     st.write(f"""
-     Grafik di atas menunjukkan distribusi nilai kolum'{column}'. Garis putus-putus merah menunjukkan rata-rata nilai.
-     Hal ini dapat membantu dalam memahami sebaran data dan mengidentifikasi nilai yang umum atau tidak biasa.
-     """)
+    st.write(f"""
+    Grafik di atas menunjukkan distribusi nilai kolum'{column}'. Garis putus-putus merah menunjukkan rata-rata nilai.
+    Hal ini dapat membantu dalam memahami sebaran data dan mengidentifikasi nilai yang umum atau tidak biasa.
+    """)
     
     
     
-     st.write('Distribusi Label Tanaman:')
-     plt.figure(figsize=(10,6))
-     ax = sns.countplot(data=data, x='label')
-     plt.xticks(rotation=45)
-     plt.title('Ditribusi label tanaman')
-     plt.xlabel('label Tanaman')
-     plt.ylabel('Jumlah')
+    st.write('Distribusi Label Tanaman:')
+    plt.figure(figsize=(10,6))
+    ax = sns.countplot(data=data, x='label')
+    plt.xticks(rotation=45)
+    plt.title('Ditribusi label tanaman')
+    plt.xlabel('label Tanaman')
+    plt.ylabel('Jumlah')
     
-     st.pyplot(plt)
+    st.pyplot(plt)
     
 
     
