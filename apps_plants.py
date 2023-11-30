@@ -16,9 +16,9 @@ def descriptive_analysis(data):
 def plot_distribution(data, column):
     plt.figure(figsize=(10,6))
     sns.histplot(data[column],kde=True)
-    plt.title(f"Distribusi {column}")
+    plt.title(f"Distribution {column}")
     plt.xlabel(column)
-    plt.ylabel('Frekuensi')
+    plt.ylabel('Frequency')
     
     mean_val = data[column].mean()
     plt.axvline(mean_val, color='r', linestyle='dashed',linewidth=2)
@@ -26,49 +26,49 @@ def plot_distribution(data, column):
     st.pyplot(plt)       
     
 data = load_data()
-st.title("Analyze of Agricultural Data")
+st.title("Analyze of Smart Farming Data")
 
 #Menu
-st.sidebar.title('Navigasi')
-page = st.sidebar.radio("Menu Navigation",
-                        [':house: Judul', ':memo: Penjelasan Data', ':bar_chart: Gambar Data',':chart_with_upwards_trend: Visualisasi Data'])
+st.sidebar.title('Navigation')
+page = st.sidebar.radio("Navigation Menu",
+                        [':house: Title', ':memo: Data Explanation', ':bar_chart: Data Image',':chart_with_upwards_trend: Data Visualization'])
 
 
-if page == ':house: Judul':
-    st.header('Selamat Datang di Web Analisis Data Pertanian :bar_chart:')
-    st.write('Aplikasi ini memberikan Analisis Tentang kondisi pertanian.')
+if page == ':house: Title':
+    st.header('Welcome to Smart Farming Web Data Analysis:bar_chart:')
+    st.write('This Website Give Analysis About Agricultural Condition.')
 
-elif page ==':memo: Penjelasan Data':
-    st.header('Penjelasan Data')
+elif page ==':memo: Data Explanation':
+    st.header('Data Explanation')
     st.write("""
     Data ini berisi informasi mengenai kondisi pertanian yang meliputi :
     - Nitrogen (N)
-    - Fosfor (P)
-    - Kalium (K)
-    - Suhu
-    - Kelembapan
-    - pH
-    - Curah Hujan
-    - Label Tanaman
+    - Phospor (P)
+    - Pottasium (K)
+    - Temperature
+    - Humidity
+    - Potential of Hydrogen (pH)
+    - Rainfall
+    - Crops Labell
     
-    Berikut adalah Sample Data Mentah yang digunakan dalam web ini :
+    This is Raw Data Sample Used in website :
     """)
     st.dataframe(data) 
 
-elif page ==':bar_chart: Gambar Data':
-    st.header('Gambaran Data')
-    st.write('Berikut adalah analisis deskriptif dari datasetL:')
+elif page ==':bar_chart: Data Image':
+    st.header('Data Description')
+    st.write('This is Descriptive Analysis from datasetL:')
     st.dataframe(descriptive_analysis(data))
     
 
-elif page ==':chart_with_upwards_trend: Visualisasi Data':
-    st.header('Visualisasi Data')
-    column = st.selectbox('Pilih Kolom Untuk Visualisasi', data.columns)
+elif page ==':chart_with_upwards_trend: Data Visualization':
+    st.header('Data Visualization')
+    column = st.selectbox('Choose Column for Visualization', data.columns)
     plot_distribution(data,column)
     
     st.write(f"""
-    Grafik di atas menunjukkan distribusi nilai kolum '{column}'. Garis putus-putus merah menunjukkan rata-rata nilai.
-    Hal ini dapat membantu dalam memahami sebaran data dan mengidentifikasi nilai yang umum atau tidak biasa.
+    Graphic above Shows Distribution Column Value '{column}'. Red Dashed Line Shows Average Value.
+    It Can Help to Understand Data Distribution and Identifify Common or Absent Value.
     """)
     
     
