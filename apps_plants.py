@@ -75,15 +75,8 @@ elif page ==':chart_with_upwards_trend: Data Visualization':
     
     
     
-    st.write('Distribusi Label Tanaman:')
-    plt.figure(figsize=(10,6))
-    ax = sns.countplot(data=data, x='label')
-    plt.xticks(rotation=45)
-    plt.title('Ditribusi label tanaman')
-    plt.xlabel('label Tanaman')
-    plt.ylabel('Jumlah')
+
     
-    st.pyplot(plt)
     
 
     
