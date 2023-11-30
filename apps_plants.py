@@ -41,7 +41,7 @@ if page == ':house: Title':
 elif page ==':memo: Data Explanation':
     st.header('Data Explanation')
     st.write("""
-    Data ini berisi informasi mengenai kondisi pertanian yang meliputi :
+    This data Contains information about Agricultural condition, including :
     - Nitrogen (N)
     - Phospor (P)
     - Pottasium (K)
@@ -57,7 +57,7 @@ elif page ==':memo: Data Explanation':
 
 elif page ==':bar_chart: Data Image':
     st.header('Data Description')
-    st.write('This is Descriptive Analysis from datasetL:')
+    st.write('This is Descriptive Analysis from dataset:')
     st.dataframe(descriptive_analysis(data))
     
 
