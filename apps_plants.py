@@ -65,12 +65,12 @@ elif page ==':chart_with_upwards_trend: Data Visualization':
     st.header('Data Visualization')
     columns_to_visualize = data.columns.drop('label')
     # Pilihan kolom untuk visualisasi tanpa 'Row Labels'
-    column = st.selectbox('Pilih Kolom untuk Visualisasi', columns_to_visualize)
+    column = st.selectbox('Choose Clumn for Visualisation', columns_to_visualize)
     plot_distribution(data, column)
     
     st.write(f"""
-    Grafik di atas menunjukkan distribusi nilai kolum'{column}'. Garis putus-putus merah menunjukkan rata-rata nilai.
-    Hal ini dapat membantu dalam memahami sebaran data dan mengidentifikasi nilai yang umum atau tidak biasa.
+    Graphic above shows distribution Column Value'{column}'. Red dashed line showed average value.
+    it cann help to understand distribution data and to Identify common or unusual value.
     """)
     
     
