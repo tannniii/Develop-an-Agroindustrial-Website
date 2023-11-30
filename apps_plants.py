@@ -37,7 +37,12 @@ page = st.sidebar.radio("Navigation Menu",
 if page == ':house: Title':
     st.header('Welcome to Smart Farming Web Data Analysis:bar_chart:')
     st.write('This Website Give Analysis About Agricultural Condition.')
-
+    st.write('The dataset contains information about the growth conditions of various crops, including measurements of Nitrogen (N), Phosphorus (P), and Potassium (K) levels in the soil, as well as environmental factors such as temperature, humidity, pH level, and rainfall. The 'label' column indicates the type of crop being grown. This data can be used to analyze the optimal growing conditions for different crops, monitor farming practices, and make informed decisions to improve crop yield and quality. It provides valuable insights for farmers and agricultural researchers to optimize farming techniques and enhance agricultural productivity.')
+    st.write('The motivational points of the data include:
+    - Empowering farmers to optimize farming techniques and enhance agricultural productivity.
+    - Providing valuable insights for making informed decisions to improve crop yield and quality.
+    - Enabling the agricultural community to adapt and innovate in order to achieve sustainable and efficient farming practices.')
+    st.write('The challenge of the data lies in leveraging the diverse set of factors and measurements to identify the optimal growth conditions for different crops. This involves analyzing the complex interplay between soil nutrients, environmental variables, and crop types to develop effective farming strategies. Additionally, ensuring the accuracy and reliability of the data is crucial for making informed decisions and recommendations. The challenge also includes the need to translate the data into actionable insights that can be practically applied by farmers to improve crop yield and quality.')
 elif page ==':memo: Data Explanation':
     st.header('Data Explanation')
     st.write("""
