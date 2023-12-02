@@ -36,7 +36,7 @@ page = st.sidebar.radio("Navigation Menu",
 
 
 if page == ':house: Title':
-    st.image('gambargif.gif',use_column_width=True)
+    st.image('gambartani.jpg',use_column_width=True)
     st.header('Welcome to Smart Farming Web Data Analysis:bar_chart:')
     st.write('This Website Give Analysis About Agricultural Condition.')
     st.write('The dataset contains information about the growth conditions of various crops, including measurements of Nitrogen (N), Phosphorus (P), and Potassium (K) levels in the soil, as well as environmental factors such as temperature, humidity, pH level, and rainfall. The "label" column indicates the type of crop being grown. This data can be used to analyze the optimal growing conditions for different crops, monitor farming practices, and make informed decisions to improve crop yield and quality. It provides valuable insights for farmers and agricultural researchers to optimize farming techniques and enhance agricultural productivity.')
